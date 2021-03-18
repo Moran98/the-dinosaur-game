@@ -11,12 +11,12 @@ public class PauseMenu : MonoBehaviour
 
     public static bool isPaused=false;
     public GameObject pauseMenuUI;
-     private GrammarRecognizer gr;
+    private GrammarRecognizer gr;
     private string valueString;
 
     private void Start()
     {
-        pauseMenuUI.SetActive(false);
+        // pauseMenuUI.SetActive(false);
         gr = new GrammarRecognizer(Path.Combine(Application.streamingAssetsPath, 
                                                 "SimpleGrammar.xml"), 
                                     ConfidenceLevel.Low);
@@ -43,16 +43,14 @@ public class PauseMenu : MonoBehaviour
             message.Append("Key: " + keyString + ", Value: " + valueString + " ");
         }
 
-
         switch (valueString)
         {
             case "PAUSE THE GAME":
                 PauseGame();
-                gr.Stop();
+                Debug.Log("PAUSE");
                 break;
             case "RESUME THE GAME":
                 ResumeGame();
-                gr.Stop();
                 break;
             case "quit":
                 Quit();
@@ -79,17 +77,18 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void PauseGame()
     {
+        isPaused = true;
+        Debug.Log("PAUSE CALLED");
         pauseMenuUI.SetActive(true);
         Time.timeScale=0f;
-        isPaused = true;
     }
 
     // Update is called once per frame
     void ResumeGame()
     {
+        isPaused = false;
         pauseMenuUI.SetActive(false);
         Time.timeScale=1f;
-        isPaused = false;
     }
 
     public void Quit(){
