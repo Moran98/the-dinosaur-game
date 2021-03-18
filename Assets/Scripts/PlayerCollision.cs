@@ -42,6 +42,20 @@ public class PlayerCollision : MonoBehaviour
             message.Append("Key: " + keyString + ", Value: " + valueString + " ");
         }
 
+        switch (valueString)
+        {
+            case "RESTART THE GAME":
+                NewGame();
+                gr.Stop();
+                break;
+            case "QUIT THE GAME":
+                Quit();
+                gr.Stop();
+                break;
+            default:
+                break;
+        }
+
         
         // use a string builder to create the string and out put to the user
         Debug.Log(message);
@@ -53,21 +67,6 @@ public class PlayerCollision : MonoBehaviour
         {
             gr.OnPhraseRecognized -= GR_OnPhraseRecognized;
             gr.Stop();
-        }
-    }
-
-    void Update()
-    {
-        switch (valueString)
-        {
-            case "restart":
-                NewGame();
-                break;
-            case "quit":
-                Quit();
-                break;
-            default:
-                break;
         }
     }
 

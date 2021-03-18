@@ -57,14 +57,17 @@ public class MenuOptions : MonoBehaviour
     {
         switch (valueString)
         {
-            case "start":
+            case "START THE GAME":
                 NewGame();
+                gr.Stop();
                 break;
-            case "instructions":
+            case "LEARN TO PLAY":
                 Instructions();
+                gr.Stop();
                 break;
-            case "back":
+            case "RETURN TO MENU":
                 Return();
+                gr.Stop();
                 break;
             default:
                 break;

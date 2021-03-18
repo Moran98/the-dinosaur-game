@@ -30,39 +30,46 @@ xmlns="http://www.w3.org/2001/06/grammar">
       <item>
         <ruleref uri="#back"/>
       </item>
+      <item>
+        <ruleref uri="#mute"/>
+      </item>
     </one-of>
   </rule>
 
   <rule id="start">
-    <item>start</item>
+    <item>START THE GAME</item>
   </rule>
 
   <rule id="quit">
-    <item>quit</item>
+    <item>QUIT THE GAME</item>
   </rule>
 
   <rule id="restart">
-    <item>restart</item>
+    <item>RESTART THE GAME</item>
   </rule>
 
   <rule id="pause">
-    <item>pause</item>
+    <item>PAUSE THE GAME</item>
   </rule>
 
   <rule id="resume">
-    <item>resume</item>
+    <item>RESUME THE GAME</item>
   </rule>
 
   <rule id="instructions">
-    <item>instructions</item>
+    <item>LEARN TO PLAY</item>
   </rule>
 
   <rule id="back">
-    <item>back</item>
+    <item>RETURN TO MENU</item>
+  </rule>
+
+  <rule id="mute">
+    <item>MUTE THE GAME</item>
   </rule>
 
   <rule id="jump">
-    <item>jump</item>
+    <item>JUMP</item>
   </rule>
 
 </grammar>

@@ -43,6 +43,25 @@ public class PauseMenu : MonoBehaviour
             message.Append("Key: " + keyString + ", Value: " + valueString + " ");
         }
 
+
+        switch (valueString)
+        {
+            case "PAUSE THE GAME":
+                PauseGame();
+                gr.Stop();
+                break;
+            case "RESUME THE GAME":
+                ResumeGame();
+                gr.Stop();
+                break;
+            case "quit":
+                Quit();
+                gr.Stop();
+                break;
+            default:
+                break;
+        }
+
         
         // use a string builder to create the string and out put to the user
         Debug.Log(message);
@@ -57,53 +76,17 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        switch (valueString)
-        {
-            case "pause":
-                PauseGame();
-                break;
-            case "resume":
-                ResumeGame();
-                break;
-            case "quit":
-                Quit();
-                break;
-            default:
-                break;
-        }
-
-        // if(Input.GetKeyDown(KeyCode.Escape)){
-        //     if(isPaused){
-        //         ResumeGame();
-        //     }
-        //     else{
-        //         PauseGame();
-        //     }
-        // }
-    }
-
     // Update is called once per frame
     void PauseGame()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale=0f;
         isPaused = true;
-
     }
 
     // Update is called once per frame
     void ResumeGame()
     {
-        pauseMenuUI.SetActive(false);
-        Time.timeScale=1f;
-        isPaused = false;
-    }
-
-    public void Resume(){
         pauseMenuUI.SetActive(false);
         Time.timeScale=1f;
         isPaused = false;

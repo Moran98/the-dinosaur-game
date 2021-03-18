@@ -190,7 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: START GAME
+  m_Text: START THE GAME
 --- !u!222 &218637121
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: DINO JUMP
+  m_Text: DINO STOMP
 --- !u!222 &242090212
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -618,7 +618,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INSTRUCTIONS
+  m_Text: LEARN TO PLAY
 --- !u!222 &973732238
 CanvasRenderer:
   m_ObjectHideFlags: 0

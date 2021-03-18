@@ -11,12 +11,14 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     private float moveInput;
     private string valueString;
+    public AudioSource _as;
     public Rigidbody2D rb;
     private GrammarRecognizer gr;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        _as = GetComponent<AudioSource>();
         gr = new GrammarRecognizer(Path.Combine(Application.streamingAssetsPath, 
                                                 "SimpleGrammar.xml"), 
                                     ConfidenceLevel.Low);
@@ -43,6 +45,19 @@ public class PlayerMovement : MonoBehaviour
             message.Append("Key: " + keyString + ", Value: " + valueString + " ");
         }
 
+        switch (valueString)
+        {
+            case "JUMP":
+                Jump();
+                break;
+            case "MUTE THE GAME":
+                Mute();
+                gr.Stop();
+                break;
+            default:
+                break;
+        }
+
         
         // use a string builder to create the string and out put to the user
         Debug.Log(message);
@@ -57,27 +72,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        switch (valueString)
-        {
-            case "jump":
-                Jump();
-                break;
-            case "pause":
-                Jump();
-                break;
-            case "resume":
-                Jump();
-                break;
-            default:
-                break;
-        }
-    }
-
+    // Method called when 'jump' command is used.
     void Jump(){
         rb.velocity = Vector2.up*jumpForce;
+    }
+    
+    // Mute the audiosource once the command has been called
+    void Mute(){
+        _as.mute = !_as.mute;
     }
 }

@@ -268,7 +268,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2) INSTRUCTIONS
+  m_Text: 2) LEARN TO PLAY
 --- !u!222 &103471554
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -346,7 +346,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4) QUIT
+  m_Text: 4) QUIT THE GAME
 --- !u!222 &151732379
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -585,7 +585,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 6) MUTE
+  m_Text: 6) MUTE THE GAME
 --- !u!222 &419805870
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -631,7 +631,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -483.9, y: 215.5}
-  m_SizeDelta: {x: 60, y: 30}
+  m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &562772318
 MonoBehaviour:
@@ -793,7 +793,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1) START
+  m_Text: 1) START THE GAME
 --- !u!222 &608803957
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -955,7 +955,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1) BACK
+  m_Text: 1) RETURN TO MENU
 --- !u!222 &815001614
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1283,7 +1283,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: BACK
+  m_Text: 'RETURN '
 --- !u!222 &880963802
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1518,7 +1518,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5) RESTART
+  m_Text: 5) RESTART THE GAME
 --- !u!222 &1551999269
 CanvasRenderer:
   m_ObjectHideFlags: 0
